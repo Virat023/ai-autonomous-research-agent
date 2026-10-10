@@ -17,3 +17,6 @@ packages = ["src/research_agent"]
 dev = [
     "pytest>=9.1.1",
 ]
+
+[project.scripts]
+research-agent = "research_agent.cli:main"
