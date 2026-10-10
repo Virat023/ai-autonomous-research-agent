@@ -4,7 +4,9 @@ name = "ai-autonomous-research-agent"
 version = "0.1.0"
 description = "An AI agent that researches topics and generates evidence-based reports with citations."
 requires-python = ">=3.12,<3.14"
-dependencies = []
+dependencies = [
+    "ddgs>=9.16.0",
+]
 
 [build-system]
 requires = ["hatchling"]
