@@ -1,91 +1,37 @@
 # AI Autonomous Research & Analyst Agent
 
-An AI-powered research agent designed to gather information from multiple sources, analyze evidence, and generate structured reports with citations.
+An AI-powered research agent designed to gather information, analyze evidence, and generate structured reports with citations.
 
-## Project Goals
-
-- Research a user-provided topic systematically.
-- Gather information from relevant sources.
-- Analyze and synthesize findings.
-- Produce structured reports supported by citations.
-- Handle unreliable sources and research errors transparently.
-
-## Planned Features
-
-- Automated research planning
-- Web search and source collection
-- Evidence-based analysis and synthesis
-- Source tracking and citations
-- Structured report generation
-- Research quality evaluation
-
-*These features are planned; they are not all implemented yet.*
-
-## Technology Stack
-
-- **Language:** Python 3.12
-- **Environment and dependencies:** uv
-- **Version control:** Git and GitHub
-
-Additional technologies will be documented as they are integrated.
-
-## Project Status
-
-**Stage:** Foundation setup
-
-The initial project structure, Python package configuration, dependency lockfile, and GitHub repository have been established.
-
-## Getting Started
-
-Prerequisites: Python 3.12 and uv.
-
-The project is under active development. Setup and execution instructions will be expanded as implementation progresses.
-
-## License
-
-No license has been selected yet.# AI Autonomous Research & Analyst Agent
-
-An AI-powered research agent designed to gather information from multiple sources, analyze evidence, and generate structured reports with citations.
-
-## Project Goals
+## Project goals
 
 - Research a user-provided topic systematically.
 - Gather information from relevant sources.
 - Analyze and synthesize findings.
-- Produce structured reports supported by citations.
+- Produce reports supported by citations.
 - Handle unreliable sources and research errors transparently.
 
-## Planned Features
+## Current status
 
-- Automated research planning
-- Web search and source collection
-- Evidence-based analysis and synthesis
-- Source tracking and citations
-- Structured report generation
-- Research quality evaluation
+The project is under active development. The command-line app currently accepts a topic, removes extra spaces, and rejects blank input. Web search and page text extraction are available as separate components, but are not yet connected to the command-line workflow. AI analysis and report generation are planned.
 
-*These features are planned; they are not all implemented yet.*
+## Technology
 
-## Technology Stack
+- Python 3.12
+- uv for Python dependencies and project commands
+- pytest for tests
+- DDGS for web search
+- HTTPX and Beautiful Soup for retrieving and extracting page text
 
-- **Language:** Python 3.12
-- **Environment and dependencies:** uv
-- **Version control:** Git and GitHub
+## Getting started
 
-Additional technologies will be documented as they are integrated.
+### Prerequisites
 
-## Project Status
+Install Python 3.12, Git, and uv.
 
-**Stage:** Foundation setup
+### Set up the project
 
-The initial project structure, Python package configuration, dependency lockfile, and GitHub repository have been established.
+Clone the repository and enter its folder:
 
-## Getting Started
-
-Prerequisites: Python 3.12 and uv.
-
-The project is under active development. Setup and execution instructions will be expanded as implementation progresses.
-
-## License
-
-No license has been selected yet.
+```powershell
+git clone https://github.com/Virat023/ai-autonomous-research-agent.git
+cd ai-autonomous-research-agent
