@@ -1,15 +1,21 @@
-from research_agent.topic import validate_topic
+from research_agent.logging_config import configure_logging
+from research_agent.research import research_topic
 
 
 def main() -> None:
+    configure_logging()
     topic = input("Enter a research topic: ")
+
     try:
-        cleaned_topic = validate_topic(topic)
+        report = research_topic(topic)
     except ValueError as error:
         print(f"Error: {error}")
         return
+    except RuntimeError as error:
+        print(f"Research failed: {error}")
+        return
 
-    print(f"Research topic: {cleaned_topic}")
+    print(report)
 
 
 if __name__ == "__main__":
