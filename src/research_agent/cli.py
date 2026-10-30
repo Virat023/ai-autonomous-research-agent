@@ -1,3 +1,4 @@
+import argparse
 import re
 from datetime import datetime
 from pathlib import Path
@@ -21,9 +22,22 @@ def save_report(topic: str, report: str) -> Path:
     return report_path
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     configure_logging()
-    topic = input("Enter a research topic: ")
+
+    parser = argparse.ArgumentParser(
+        description="Research a topic and save a cited Markdown report."
+    )
+    parser.add_argument(
+        "topic",
+        nargs="*",
+        help="Research topic. If omitted, you'll be prompted.",
+    )
+    args = parser.parse_args(argv)
+
+    topic = " ".join(args.topic).strip()
+    if not topic:
+        topic = input("Enter a research topic: ")
 
     try:
         report = research_topic(topic)

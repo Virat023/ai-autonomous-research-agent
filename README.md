@@ -36,3 +36,37 @@ Clone the repository and enter its folder:
 ```powershell
 git clone https://github.com/Virat023/ai-autonomous-research-agent.git
 cd ai-autonomous-research-agent
+```
+
+Install dependencies and download the model:
+
+```powershell
+uv sync
+ollama pull qwen3:4b
+```
+
+Make sure Ollama is running. Start the assistant interactively:
+
+```powershell
+uv run research-agent
+```
+
+Or pass a topic directly:
+
+```powershell
+uv run research-agent "solar energy"
+```
+
+The report appears in the terminal and is saved as a timestamped Markdown file in `reports/`. After the app finishes, run the tests from the PowerShell prompt:
+
+```powershell
+uv run pytest
+```
+
+## Current limitations
+
+Some websites block automated page retrieval. When that happens, the agent may use the search result snippet and note this in the report. The model can make mistakes, so check important findings against the linked sources.
+
+## License
+
+No license has been selected yet.
