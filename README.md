@@ -1,32 +1,32 @@
 # AI Autonomous Research & Analyst Agent
 
-An AI-powered research agent designed to gather information, analyze evidence, and generate structured reports with citations.
+A local research assistant that searches the web, gathers source text, and uses a language model to create a short report with source links and citations.
 
-## Project goals
+## Current features
 
-- Research a user-provided topic systematically.
-- Gather information from relevant sources.
-- Analyze and synthesize findings.
-- Produce reports supported by citations.
-- Handle unreliable sources and research errors transparently.
+- Accepts a research topic in the command line.
+- Searches the web and retrieves available page text.
+- Uses search snippets when a page cannot be retrieved.
+- Generates a short report with numbered citations using Ollama and Qwen 3.
+- Reports when some sources were available only as search snippets.
+- Rejects model responses that omit citations or cite unknown sources.
 
-## Current status
-
-The project is under active development. The command-line app currently accepts a topic, removes extra spaces, and rejects blank input. Web search and page text extraction are available as separate components, but are not yet connected to the command-line workflow. AI analysis and report generation are planned.
+Reports are model-generated and should be checked against their linked sources. A citation marker confirms that a source number exists; it does not independently verify every claim.
 
 ## Technology
 
 - Python 3.12
-- uv for Python dependencies and project commands
+- uv for dependencies and project commands
 - pytest for tests
 - DDGS for web search
 - HTTPX and Beautiful Soup for retrieving and extracting page text
+- Ollama with the `qwen3:4b` local model
 
 ## Getting started
 
 ### Prerequisites
 
-Install Python 3.12, Git, and uv.
+Install Python 3.12, Git, uv, and Ollama.
 
 ### Set up the project
 
