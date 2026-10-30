@@ -101,3 +101,11 @@ For each test run, record:
 - **Execution time:** About 21 seconds.
 - **Improvements needed:** Review whether the conclusion stays within the evidence provided.
 
+### Run: 2026-10-30 — solar energy
+
+- **Sources collected:** Four sources; Wikipedia and Britannica used search snippets, while two pages were retrieved.
+- **Report quality:** Included Summary, Key findings, and Conclusion. The report was concise and relevant.
+- **Citation review:** The report cited sources [1] and [2]. Check that the conclusion’s claims are supported by [1].
+- **Errors or failures:** Wikipedia and Britannica returned 403 errors; Brave returned 429 and Mojeek timed out.
+- **Execution time:** About 25 seconds.
+- **Improvements needed:** Check conclusion claims against cited evidence.
