@@ -21,7 +21,7 @@ Reports are model-generated and should be checked against their linked sources. 
 - pytest for tests
 - DDGS for web search
 - HTTPX and Beautiful Soup for retrieving and extracting page text
-- Ollama with the `qwen3:4b` local model
+- Ollama with the `qwen3:1.7b` local model
 
 ## Getting started
 
@@ -42,7 +42,7 @@ Install dependencies and download the model:
 
 ```powershell
 uv sync
-ollama pull qwen3:4b
+ollama pull qwen3:1.7b
 ```
 
 Make sure Ollama is running. Start the assistant interactively:
@@ -70,3 +70,13 @@ Some websites block automated page retrieval. When that happens, the agent may u
 ## License
 
 No license has been selected yet.
+
+### Run: 2026-10-30 - solar energy with Qwen3 1.7B
+
+- **Research question:** solar energy
+- **Sources collected:** Four listed sources. The report cited Wikipedia, Britannica, and Department of Energy. The fourth source title was merged with unrelated titles and was not cited.
+- **Report quality observations:** Included Summary, Key findings, and Conclusion. The report was concise and relevant.
+- **Citation issues found:** Factual statements had citation markers. Manually check that each cited snippet supports its claim.
+- **Errors or failures:** Wikipedia and Britannica page retrieval returned 403; search also encountered 403, 429, and a timeout.
+- **Total execution time:** About 25 seconds.
+- **Improvements needed:** Clean up merged source titles and continue checking source relevance.

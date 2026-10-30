@@ -72,3 +72,22 @@ For each test run, record:
 - Total execution time
 - Improvements needed
 
+### Run: 2026-10-30 - solar energy
+
+- **Research question:** solar energy
+- **Sources collected:** One source, the Wikipedia search snippet. The page itself returned 403; Grokipedia was skipped.
+- **Report quality observations:** Included Summary, Key findings, and Conclusion. The content was concise and relevant.
+- **Citation issues found:** Claims used citation [1]. The citation refers to a search snippet, so its support should be checked manually.
+- **Errors or failures:** Several search engines returned errors or timed out; Wikipedia page retrieval returned 403.
+- **Total execution time:** About 9 minutes 51 seconds.
+- **Improvements needed:** Reduce run time and increase the number of relevant sources when available.
+
+### Run: 2026-10-30 - solar energy with `/no_think`
+
+- **Research question:** solar energy
+- **Sources collected:** Four listed sources: Wikipedia, Britannica, Department of Energy, and a renewables site. Wikipedia and Britannica snippets were used because page retrieval returned 403. The fourth source title appeared merged with other titles.
+- **Report quality observations:** Included Summary, Key findings, and Conclusion. The report was concise and on topic.
+- **Citation issues found:** The report cited sources [1], [2], and [3]. The claims should still be checked against those sources manually. Source [4] was listed but not cited.
+- **Errors or failures:** Wikipedia and Britannica page retrieval returned 403.
+- **Total execution time:** About 8 minutes 25 seconds.
+- **Improvements needed:** Reduce generation time and improve search-result title and source filtering.
