@@ -91,3 +91,13 @@ For each test run, record:
 - **Errors or failures:** Wikipedia and Britannica page retrieval returned 403.
 - **Total execution time:** About 8 minutes 25 seconds.
 - **Improvements needed:** Reduce generation time and improve search-result title and source filtering.
+
+### Run: 2026-10-30 — solar energy
+
+- **Sources collected:** Four sources; two used search snippets because their pages could not be retrieved.
+- **Report quality:** Included Summary, Key findings, and Conclusion; concise and relevant.
+- **Citation review:** Check that the conclusion’s claims are supported by its cited source.
+- **Errors or failures:** Wikipedia and Britannica returned 403 errors; Grokipedia was skipped.
+- **Execution time:** About 21 seconds.
+- **Improvements needed:** Review whether the conclusion stays within the evidence provided.
+
