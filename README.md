@@ -10,6 +10,7 @@ A local research assistant that searches the web, gathers source text, and uses 
 - Generates a short report with numbered citations using Ollama and Qwen 3.
 - Reports when some sources were available only as search snippets.
 - Rejects model responses that omit citations or cite unknown sources.
+- Saves each report as a timestamped Markdown file in the `reports/` folder.
 
 Reports are model-generated and should be checked against their linked sources. A citation marker confirms that a source number exists; it does not independently verify every claim.
 
