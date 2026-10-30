@@ -23,7 +23,11 @@ def test_research_topic_builds_report_with_source_citations(monkeypatch):
 
     def fake_generate_response(prompt):
         captured["prompt"] = prompt
-        return "## Summary\nAverage temperatures are rising [1]."
+        return (
+            "## Summary\nAverage temperatures are rising [1].\n\n"
+            "## Key findings\n- Average temperatures are rising [1].\n\n"
+            "## Conclusion\nThe source reports rising average temperatures [1]."
+        )
 
     monkeypatch.setattr(research, "generate_response", fake_generate_response)
 
@@ -33,4 +37,3 @@ def test_research_topic_builds_report_with_source_citations(monkeypatch):
     assert "[1] Climate overview - https://example.com/climate" in report
     assert "Average temperatures are rising." in captured["prompt"]
     assert "climate change" in captured["prompt"]
-

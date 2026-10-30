@@ -23,7 +23,11 @@ def test_research_topic_rejects_uncited_model_findings(monkeypatch):
     monkeypatch.setattr(
         research,
         "generate_response",
-        lambda prompt: "Solar panels make electricity.",
+        lambda prompt: (
+            "## Summary\nSolar panels make electricity.\n\n"
+            "## Key findings\n- Solar panels make electricity.\n\n"
+            "## Conclusion\nSolar panels make electricity."
+        ),
     )
 
     with pytest.raises(

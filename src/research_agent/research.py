@@ -82,6 +82,13 @@ def research_topic(topic: str) -> str:
     
 
     findings = generate_response(prompt).strip()
+    required_sections = (
+        r"(?im)^##\s+Summary\s*$",
+        r"(?im)^##\s+Key findings\s*$",
+        r"(?im)^##\s+Conclusion\s*$",
+    )
+    if any(not re.search(pattern, findings) for pattern in required_sections):
+        raise RuntimeError("The model response is missing a required report section.")
     citation_numbers = [
         int(number) for number in re.findall(r"\[(\d+)\]", findings)
     ]
